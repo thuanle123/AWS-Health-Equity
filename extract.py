@@ -7,7 +7,7 @@ import csv
 
 ntee_whitelist = []
 activity_whitelist = []
-
+test = []
 
 f = open("ntee_whitelist.csv")
 for row in csv.reader(f):
@@ -26,6 +26,17 @@ for row in csv.reader(f):
 #for row in csv.reader(f):
 #    for item in row:
 #        activity_whitelist.append(item)
+f = pd.read_csv("BMF.csv")
+activity_filter = f['ACTIVITY']
+activity_filter.to_csv("activity_filter_BMF.csv", index=False)
+f = open("activity_filter_BMF.csv")
+next(f,None)
+for row in csv.reader(f):
+    for item in row:
+        if item != '0':
+            test.append(item)
+#print(test)
+
 
 
 

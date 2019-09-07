@@ -19,13 +19,8 @@ for row in csv.reader(f):
             for i in range(0, 9):
                 res = item.ljust(N + len(item), str(i))
                 ntee_whitelist.append(res)
-                # This loop add A-Z into three characters NTEE CODE
-                # B60 becomes B60A, B60B
-                for i in range(0,26):
-                    new_res = res.ljust(N + len(res), string.ascii_uppercase[i])
-                    ntee_whitelist.append(new_res)
         ntee_whitelist.append(item)
-#print(ntee_whitelist)
+
 
 #f = open("activity_whitelist.csv")
 #for row in csv.reader(f):

@@ -59,7 +59,6 @@ def activity_processing():
     remove_leading_zero = [i.lstrip('0') for i in holding]
     f.close()
 
-    # Cannot put this in a function because remove_leading_zero is a local variable
     f = pd.read_csv("BMF.csv")
     keep_col = ['EIN', 'NAME', 'STREET', 'CITY', 'ZIP', 'ACTIVITY', 'NTEE_CD', 'REVENUE_AMT']
     new_f = f[keep_col]
@@ -70,7 +69,7 @@ def activity_processing():
 
 if __name__ == '__main__':
     t1 = Thread(target = ntee_processing)
-    t2 = Thread(target = activity_processing())
+    t2 = Thread(target = activity_processing)
     t1.setDaemon(True)
     t2.setDaemon(True)
     t1.start()

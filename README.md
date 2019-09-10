@@ -25,3 +25,17 @@ Install python3, pip3 and pandas
    TODO: ADD STUFF IN HERE FOR AWS COMPRERHEND AND CSV TO JSON
 
 ```
+
+# Inspiration
+
+
+# Summary
+
+# Made with
+
+# Challenges faced
+
+# Future Plans
+
+# Created By
+
